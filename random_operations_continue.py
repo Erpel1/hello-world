@@ -58,7 +58,8 @@ def random_operations(input_dir, output_dir, seed, maximg=None):
             cropmax = min(min(width, height), cropsize_max)
             if cropmax<cropsize_min:
                 print(src, width, height)
-            continue #assert cropmax>=cropsize_min
+                continue #ADDED
+            #assert cropmax>=cropsize_min
             
             cropmin = max(cropmax*cropsize_ratio[0]//cropsize_ratio[1], cropsize_min)
             cropsize = random.randint(cropmin, cropmax)
